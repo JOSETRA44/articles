@@ -1,0 +1,29 @@
+/* Tokens: la única fuente de color, tipo y medida. */
+:root {
+  --ink: #121212;
+  --ink-muted: #5a5a5a;
+  --rule: #dcdcdc;
+  --paper: #ffffff;
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+
+  --measure: 38rem;
+  --gutter: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #e8e6e3;
+    --ink-muted: #9a9894;
+    --rule: #2e2e2e;
+    --paper: #121212;
+  }
+}
+
+:root[data-theme="dark"] {
+  --ink: #e8e6e3;
+  --ink-muted: #9a9894;
+  --rule: #2e2e2e;
+  --paper: #121212;
+}
