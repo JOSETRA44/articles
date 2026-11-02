@@ -1,0 +1,22 @@
+/* Impresión: el portafolio se vuelve un CV de una hoja, en blanco y negro. */
+:root { --paper: #fff; --ink: #000; --ink-muted: #333; --rule: #000; --rule-soft: #bbb; }
+
+@page { margin: 1.5cm; }
+
+body { font-size: 10.5pt; }
+.skip, .figure, .masthead__ears, .masthead__motto { display: none; }
+.masthead__name { font-size: 26pt; }
+.sheet { padding-block: 1rem 0; }
+.columns { display: block; max-width: none; }
+.summary { position: static; margin-top: 1.5rem; break-inside: avoid; }
+.entry, .index li { break-inside: avoid; }
+
+/* Sin pantalla no hay clic: se imprime la dirección del enlace. */
+.body a[href^="http"]::after,
+.summary a[href^="http"]::after {
+  content: " (" attr(href) ")";
+  font-size: 0.8em;
+  color: var(--ink-muted);
+  word-break: break-all;
+}
+.entry__title a::after { content: none; }

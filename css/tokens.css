@@ -1,29 +1,38 @@
 /* Tokens: la única fuente de color, tipo y medida. */
 :root {
-  --ink: #121212;
-  --ink-muted: #5a5a5a;
-  --rule: #dcdcdc;
-  --paper: #ffffff;
+  --paper: #f3eee3;
+  --ink: #1b1a17;
+  --ink-muted: #5b574e;
+  --rule: #1b1a17;
+  --rule-soft: #cfc7b6;
+  --photo-blend: multiply; /* el blanco de la foto se funde con el papel */
 
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+  --blackletter: "UnifrakturMaguntia", "Old English Text MT", var(--serif);
 
-  --measure: 38rem;
+  --measure: 36rem;
+  --aside: 15rem;
+  --page: 62rem;
   --gutter: 1rem;
 }
 
+/* Edición nocturna: el mismo periódico, tinta clara sobre papel oscuro. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink: #e8e6e3;
-    --ink-muted: #9a9894;
-    --rule: #2e2e2e;
-    --paper: #121212;
+    --paper: #16140f;
+    --ink: #e9e2d2;
+    --ink-muted: #a39b8a;
+    --rule: #e9e2d2;
+    --rule-soft: #3a352b;
+    --photo-blend: normal;
   }
 }
 
 :root[data-theme="dark"] {
-  --ink: #e8e6e3;
-  --ink-muted: #9a9894;
-  --rule: #2e2e2e;
-  --paper: #121212;
+  --paper: #16140f;
+  --ink: #e9e2d2;
+  --ink-muted: #a39b8a;
+  --rule: #e9e2d2;
+  --rule-soft: #3a352b;
+  --photo-blend: normal;
 }
